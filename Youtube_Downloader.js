@@ -2,7 +2,8 @@
 // @name        Youtube Downloader
 // @namespace   DL
 // @description You wouldn't steal an album, so just download it.
-// @include     https://www.youtube.com/watch?v=*
+// @include     https://www.youtube.com/*
+// @exclude     https://www.youtube.com/embed/*
 // @version     1
 // @grant       GM_setValue
 // @grant       GM_getValue
