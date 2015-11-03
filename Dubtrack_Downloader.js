@@ -37,7 +37,7 @@ function download(videoId)
 {
   if (videoId == undefined || typeof(videoId) != "string")
     videoId = GM_getValue("id");
-  if (videoId != undefined)
+  if (videoId != undefined && document.getElementById("autoDown") != undefined)
     window.open('http://www.youtube-mp3.org/#v_id=' + videoId);
 }
 
@@ -94,7 +94,7 @@ function autoBtn()
 
 function startObserver()
 {
-  var observer = new MutationObserver(Plug);
+  var observer = new MutationObserver(addBtn);
   var config = { attributes: true, childList: true, characterData: true, subtree: true };
   var target = document.getElementById('room-main-player-container');
   observer.observe(target, config);
@@ -109,22 +109,29 @@ function embeded()
   getId();
 }
 
+function addBtn()
+{
+  var down = document.getElementById('down');
+  var auto = document.getElementById('autoDown');
+  if (down != undefined)
+    down.remove();
+  if (auto != undefined)
+    auto.remove();
+  if (document.getElementById("room-main-player-container-youtube").style['display'] == "block")
+    {
+      downloadBtn();
+      autoBtn();
+    }
+}
+
 function Plug()
 {
-  console.log("test");
-  if (document.getElementById("room-main-player-container-youtube").childNodes.length < 1)
+  if (document.getElementsByClassName('player-controller-container')[0] == undefined)
     setTimeout(Plug, 100);
   else
     {
-      var down = document.getElementById('down');
-      var auto = document.getElementById('autoDown');
-      if (down != undefined)
-        down.remove();
-      if (auto != undefined)
-        auto.remove();
       window.onresize = Plug;
-      downloadBtn();
-      autoBtn();
+      addBtn();
     }
 }
 
