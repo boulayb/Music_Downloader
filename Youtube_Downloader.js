@@ -135,7 +135,7 @@ function Plug()
 setTimeout(Plug, 1000);
 
 document.addEventListener('DOMNodeInserted', function (event) {
-  if (document.getElementById('down') == undefined || 
+  if (document.getElementById('down') == undefined && 
       document.getElementById('autoDown') == undefined)
   {
     document = event.currentTarget;
