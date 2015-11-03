@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Youtube Downloader
-// @namespace   YD
+// @namespace   DL
 // @description You wouldn't steal an album, so just download it.
 // @include     https://www.youtube.com/watch?v=*
 // @version     1
