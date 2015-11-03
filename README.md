@@ -1,6 +1,6 @@
 # Youtube_Downloader
 
-Download songs from Youtube the easy way.
+Download songs from Youtube the (not so) easy way.
 
 Those scripts add two buttons to the Youtube page under the player. One for direct download of the song and one that can be toggled for auto download. It will automatically download the current song when it ends. When a tab open from youtube-mp3.org you do not need to go in it to manually download the song, it will do it automatically and then close itself. Just click on the button and wait.
 
