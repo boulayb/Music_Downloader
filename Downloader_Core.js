@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name        Youtube Downloader Core
-// @namespace   YD
+// @name        Downloader Core
+// @namespace   DL
 // @description You wouldn't steal an album, so just download it
 // @include     http://www.youtube-mp3.org/*
 // @version     1
